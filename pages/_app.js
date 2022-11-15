@@ -1,14 +1,16 @@
 import '../styles/globals.css'
-import NavBar from './components/NavBar';
+import Layout from '../components/Layout'
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <NavBar/>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
       <style jsx global>{`
-        div {
-          color: white;
+        body {
+          background-color: white;
+          color: black;
         }
       `}</style>
     </>
